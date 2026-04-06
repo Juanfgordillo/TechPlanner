@@ -1,0 +1,37 @@
+.hero {
+  padding: 100px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+h1 {
+  font-size: 48px;
+  color: #fff;
+}
+
+.primary {
+  color: #adc6ff;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.primary-btn {
+  background: #3B82F6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+}
+
+.outline-btn {
+  border: 1px solid #25324D;
+  color: white;
+  padding: 12px 20px;
+  background: transparent;
+}

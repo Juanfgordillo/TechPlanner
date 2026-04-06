@@ -1,0 +1,20 @@
+.features {
+  padding: 80px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  padding: 30px;
+  border: 1px solid #25324D;
+  background: #151b2a;
+  color: #dce2f6;
+  border-radius: 8px;
+}
+
+.card:hover {
+  background: #19202e;
+}

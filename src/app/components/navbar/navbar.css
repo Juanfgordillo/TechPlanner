@@ -1,0 +1,45 @@
+.navbar {
+  background: #0c1321;
+  border-bottom: 1px solid rgba(37, 50, 77, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  color: #fff;
+}
+
+.links a {
+  margin-left: 20px;
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #fff;
+}
+
+.login {
+  background: none;
+  border: none;
+  color: #94a3b8;
+}
+
+.register {
+  background: #4d8eff;
+  border: none;
+  padding: 8px 16px;
+  color: #fff;
+  border-radius: 6px;
+}
