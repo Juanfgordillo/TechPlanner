@@ -10,9 +10,28 @@ import { Stats } from './components/stats/stats';
 import { Cta } from './components/cta/cta';
 import { Footer } from './components/footer/footer';
 import { Inicio } from './paginas/inicio/inicio';
+import { Login } from './paginas/login/login';
+import { LoginHeader } from './components/login-header/login-header';
+import { LoginForm } from './components/login-form/login-form';
+import { Nosotros } from './paginas/nosotros/nosotros';
+import { Members } from './components/members/members';
 
 @NgModule({
-  declarations: [App, Navbar, Hero, Features, Stats, Cta, Footer, Inicio],
+  declarations: [
+    App,
+    Navbar,
+    Hero,
+    Features,
+    Stats,
+    Cta,
+    Footer,
+    Inicio,
+    Login,
+    LoginHeader,
+    LoginForm,
+    Nosotros,
+    Members,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],

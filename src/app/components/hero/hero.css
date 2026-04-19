@@ -9,6 +9,10 @@
   align-items: center;
 }
 
+p {
+  color: #fff;
+}
+
 h1 {
   font-size: 48px;
   color: #fff;
