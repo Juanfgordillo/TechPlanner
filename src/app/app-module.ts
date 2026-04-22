@@ -21,6 +21,7 @@ import { CtaNosotros } from './nosotros-components/cta-nosotros/cta-nosotros';
 import { Registro } from './paginas/registro/registro';
 import { RegistroHeader } from './registro-components/registro-header/registro-header';
 import { RegistroForm } from './registro-components/registro-form/registro-form';
+import { RegistroComponente } from './paginas/registro-componente/registro-componente';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { RegistroForm } from './registro-components/registro-form/registro-form'
     Registro,
     RegistroHeader,
     RegistroForm,
+    RegistroComponente,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [provideBrowserGlobalErrorListeners()],

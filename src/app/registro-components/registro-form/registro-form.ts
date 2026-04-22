@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-registro-form',
   standalone: false,
   templateUrl: './registro-form.html',
-  styleUrl: './registro-form.css',
+  styleUrls: ['./registro-form.css'],
 })
 export class RegistroForm {}
