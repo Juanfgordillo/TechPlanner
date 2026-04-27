@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-cta-nosotros',
-  standalone: false,
+  standalone: true,
   templateUrl: './cta-nosotros.html',
   styleUrl: './cta-nosotros.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CtaNosotros {}

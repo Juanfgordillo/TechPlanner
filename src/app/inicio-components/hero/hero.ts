@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-hero',
-  standalone: false,
+  standalone: true,
   templateUrl: './hero.html',
   styleUrl: './hero.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Hero {}

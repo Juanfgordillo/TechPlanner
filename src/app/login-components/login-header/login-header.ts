@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-login-header',
-  standalone: false,
+  standalone: true,
   templateUrl: './login-header.html',
   styleUrl: './login-header.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginHeader {}

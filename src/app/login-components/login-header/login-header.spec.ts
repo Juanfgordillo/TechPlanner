@@ -8,7 +8,7 @@ describe('LoginHeader', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [LoginHeader],
+      imports: [LoginHeader],
     }).compileComponents();
 
     fixture = TestBed.createComponent(LoginHeader);

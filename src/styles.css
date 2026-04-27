@@ -1,7 +1,31 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --tp-bg-900: #0a1425;
+  --tp-bg-800: #12233a;
+  --tp-surface: #12263f;
+  --tp-surface-soft: #172f4d;
+  --tp-border: rgba(152, 193, 255, 0.25);
+  --tp-text: #e6eefc;
+  --tp-muted: #a8bddf;
+  --tp-brand: #39b3ff;
+  --tp-brand-strong: #2a90ff;
+  --tp-highlight: #8ce8ff;
+}
+
+html,
+body {
   height: 100%;
   margin: 0;
-  background-color: #0c1321;
+}
+
+body {
+  color: var(--tp-text);
+  font-family: 'Space Grotesk', 'Segoe UI', Tahoma, sans-serif;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(57, 179, 255, 0.18), transparent 35%),
+    radial-gradient(circle at 82% 7%, rgba(140, 232, 255, 0.12), transparent 30%),
+    linear-gradient(140deg, var(--tp-bg-900) 0%, var(--tp-bg-800) 55%, #182f4f 100%);
 }
 
 app-root {
@@ -10,15 +34,16 @@ app-root {
   min-height: 100vh;
 }
 
-body {
-  color: #dce2f6;
-  font-family: 'Inter', sans-serif;
+main {
+  flex: 1;
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, #0B1220 0%, #13213A 55%, #0F3D7A 100%);
+  background:
+    radial-gradient(circle at 80% 20%, rgba(140, 232, 255, 0.18), transparent 35%),
+    linear-gradient(140deg, #0c1a2f 0%, #122640 55%, #163154 100%);
 }
 
 .material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
 }

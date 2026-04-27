@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-features',
-  standalone: false,
+  standalone: true,
   templateUrl: './features.html',
   styleUrl: './features.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Features {}

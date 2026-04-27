@@ -1,8 +1,8 @@
 .footer {
-  background: #070e1c;
-  border-top: 1px solid #25324D;
-  padding: 60px 20px;
-  color: #dce2f6; /* 🔥 ESTO ARREGLA EL TEXTO NEGRO */
+  background: rgba(5, 12, 22, 0.88);
+  border-top: 1px solid rgba(140, 232, 255, 0.2);
+  padding: 2.6rem 1rem;
+  color: #dce2f6;
 }
 
 .footer-container {
@@ -10,13 +10,38 @@
   margin: auto;
 }
 
+.footer-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 .footer-brand h3 {
-  color: #ffffff;
-  margin-bottom: 5px;
+  color: #f2f8ff;
+  margin-bottom: 0.25rem;
 }
 
 .footer-brand p {
-  color: #8c909f;
-  font-size: 14px;
+  color: #9eb5d7;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.footer-links a {
+  color: #b8ceee;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #8ce8ff;
 }
 

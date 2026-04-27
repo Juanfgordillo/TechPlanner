@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-members',
-  standalone: false,
+  standalone: true,
   templateUrl: './members.html',
   styleUrl: './members.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Members {}
