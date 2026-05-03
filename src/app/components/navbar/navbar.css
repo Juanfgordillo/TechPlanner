@@ -4,10 +4,46 @@
   backdrop-filter: blur(12px);
 }
 
+.tp-nav-shell {
+  width: 100%;
+}
+
+.tp-nav .navbar-collapse {
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .tp-nav .navbar-collapse {
+    display: flex !important;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .tp-nav-links {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  .tp-nav-actions {
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+}
+
 .brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
   color: #eaf7ff;
   font-weight: 700;
   letter-spacing: 0.4px;
+}
+
+.brand-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  flex: 0 0 auto;
 }
 
 .brand-mark:hover {

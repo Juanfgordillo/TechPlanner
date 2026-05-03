@@ -2,8 +2,11 @@
   class="navbar navbar-expand-lg navbar-dark sticky-top tp-nav py-3"
   aria-label="Navegacion principal"
 >
-  <div class="container">
-    <a class="navbar-brand brand-mark" routerLink="/" (click)="closeMenu()">TechPlanner</a>
+  <div class="container-fluid px-3 px-lg-4 tp-nav-shell">
+    <a class="navbar-brand brand-mark" routerLink="/" (click)="closeMenu()">
+      <img src="assets/microchip-logo.svg" alt="" aria-hidden="true" class="brand-icon" />
+      <span>TechPlanner</span>
+    </a>
 
     <button
       class="navbar-toggler border-0 shadow-none"
@@ -17,7 +20,7 @@
     </button>
 
     <div class="collapse navbar-collapse" id="tpMainNav" [class.show]="isMenuOpen()">
-      <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-3 text-center">
+      <ul class="navbar-nav mb-3 mb-lg-0 gap-lg-3 text-center tp-nav-links">
         <li class="nav-item">
           <a class="nav-link" href="#" (click)="closeMenu()">Soluciones</a>
         </li>
@@ -40,7 +43,7 @@
         </li>
       </ul>
 
-      <div class="d-flex flex-column flex-lg-row gap-2">
+      <div class="d-flex flex-column flex-lg-row gap-2 align-items-lg-center tp-nav-actions">
         <button class="btn btn-outline-light btn-sm px-3" routerLink="/login" (click)="closeMenu()">
           Iniciar sesion
         </button>
