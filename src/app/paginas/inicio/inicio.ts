@@ -5,11 +5,12 @@ import { Features } from '../../inicio-components/features/features';
 import { Stats } from '../../inicio-components/stats/stats';
 import { Members } from '../../components/members/members';
 import { Footer } from '../../components/footer/footer';
+import { CotizacionesTableComponent } from '../cotizaciones-tablecomponent/cotizaciones-table.component';
 
 @Component({
   selector: 'app-inicio',
   standalone: true,
-  imports: [Navbar, Hero, Features, Stats, Members, Footer],
+  imports: [Navbar, Hero, Features, Stats, Members, Footer, CotizacionesTableComponent],
   templateUrl: './inicio.html',
   styleUrl: './inicio.css',
   changeDetection: ChangeDetectionStrategy.OnPush
