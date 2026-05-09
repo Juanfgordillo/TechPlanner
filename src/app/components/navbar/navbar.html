@@ -21,26 +21,46 @@
 
     <div class="collapse navbar-collapse" id="tpMainNav" [class.show]="isMenuOpen()">
       <ul class="navbar-nav mb-3 mb-lg-0 gap-lg-3 text-center tp-nav-links">
+
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="closeMenu()">Soluciones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" (click)="closeMenu()">Precios</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/nosotros" routerLinkActive="active" (click)="closeMenu()"
-            >Nosotros</a
+          <a
+            class="nav-link"
+            routerLink="/dashboard"
+            routerLinkActive="active"
+            (click)="closeMenu()"
           >
+            Dashboard
+          </a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#" (click)="closeMenu()">
+            Precios
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/nosotros"
+            routerLinkActive="active"
+            (click)="closeMenu()"
+          >
+            Nosotros
+          </a>
+        </li>
+
         <li class="nav-item">
           <a
             class="nav-link"
             routerLink="/registro-componente"
             routerLinkActive="active"
             (click)="closeMenu()"
-            >Componentes</a
           >
+            Componentes
+          </a>
         </li>
+
       </ul>
 
       <div class="d-flex flex-column flex-lg-row gap-2 align-items-lg-center tp-nav-actions">
