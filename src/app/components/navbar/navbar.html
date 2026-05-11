@@ -20,61 +20,30 @@
     </button>
 
     <div class="collapse navbar-collapse" id="tpMainNav" [class.show]="isMenuOpen()">
-      <ul class="navbar-nav mb-3 mb-lg-0 gap-lg-3 text-center tp-nav-links">
-
+      <ul class="navbar-nav mb-3 mb-lg-0 gap-lg-3 text-center tp-nav-links tp-nav-links-right">
         <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/dashboard"
-            routerLinkActive="active"
-            (click)="closeMenu()"
-          >
-            Dashboard
-          </a>
+          <a class="nav-link" routerLink="/" routerLinkActive="active" (click)="closeMenu()">Inicio</a>
         </li>
-
         <li class="nav-item">
-          <a class="nav-link" href="#" (click)="closeMenu()">
-            Precios
-          </a>
+          <a class="nav-link" routerLink="/dashboard" routerLinkActive="active" (click)="closeMenu()">Dashboard</a>
         </li>
-
         <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/nosotros"
-            routerLinkActive="active"
-            (click)="closeMenu()"
-          >
-            Nosotros
-          </a>
+          <a class="nav-link" href="#" (click)="closeMenu()">Precios</a>
         </li>
-
         <li class="nav-item">
-          <a
-            class="nav-link"
-            routerLink="/registro-componente"
-            routerLinkActive="active"
-            (click)="closeMenu()"
-          >
-            Componentes
-          </a>
+          <a class="nav-link" routerLink="/nosotros" routerLinkActive="active" (click)="closeMenu()">Nosotros</a>
         </li>
-
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/registro-componente" routerLinkActive="active" (click)="closeMenu()">Componentes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/registro" routerLinkActive="active" (click)="closeMenu()">Registro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active" (click)="closeMenu()">Login</a>
+        </li>
       </ul>
-
-      <div class="d-flex flex-column flex-lg-row gap-2 align-items-lg-center tp-nav-actions">
-        <button class="btn btn-outline-light btn-sm px-3" routerLink="/login" (click)="closeMenu()">
-          Iniciar sesion
-        </button>
-        <button
-          class="btn btn-info btn-sm px-3 fw-semibold text-dark"
-          routerLink="/registro"
-          (click)="closeMenu()"
-        >
-          Registrarse
-        </button>
-      </div>
+      <!-- Otros enlaces y acciones pueden ir a la derecha si es necesario -->
     </div>
   </div>
 </nav>
