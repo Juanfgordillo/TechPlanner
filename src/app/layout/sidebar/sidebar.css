@@ -5,7 +5,6 @@
   border-right: 1px solid var(--tp-border);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 24px 18px;
   backdrop-filter: blur(12px);
 }
@@ -15,8 +14,8 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 40px;
+  gap: 10px;
+  margin-bottom: 12px;
 }
 
 .logo-icon {
@@ -46,6 +45,31 @@
 .logo span {
   color: var(--tp-muted);
   font-size: 13px;
+}
+
+.back-button {
+  margin: 0 0 12px;
+  width: 100%;
+  border: 1px solid rgba(140, 232, 255, 0.28);
+  background: rgba(18, 38, 63, 0.85);
+  color: #f2f8ff;
+  border-radius: 14px;
+  padding: 0.85rem 1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(140, 232, 255, 0.55);
+  background: rgba(23, 47, 77, 0.95);
+}
+
+.back-button:focus-visible {
+  outline: 2px solid rgba(140, 232, 255, 0.9);
+  outline-offset: 2px;
 }
 
 /* MENU */
@@ -96,6 +120,7 @@
 /* FOOTER */
 
 .sidebar-footer {
+  margin-top: auto;
   padding-top: 24px;
   border-top: 1px solid rgba(255,255,255,0.06);
 }

@@ -1,5 +1,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { Sidebar } from '../../layout/sidebar/sidebar';
 
 interface Actividad {
@@ -24,6 +25,8 @@ interface Cotizacion {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Dashboard {
+  constructor(private readonly router: Router) {}
+
   actividades: Actividad[] = [
     {
       titulo: 'Cotización aprobada',
@@ -62,4 +65,13 @@ export class Dashboard {
       estado: 'Cancelada',
     },
   ];
+
+  regresar(): void {
+    if (window.history.length > 1) {
+      window.history.back();
+      return;
+    }
+
+    this.router.navigateByUrl('/');
+  }
 }
