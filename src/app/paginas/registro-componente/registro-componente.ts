@@ -7,4 +7,5 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RegistroComponente {}
+export class RegistroComponente {
+}

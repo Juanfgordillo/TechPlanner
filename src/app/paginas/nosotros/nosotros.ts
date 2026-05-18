@@ -11,4 +11,5 @@ import { CtaNosotros } from '../../nosotros-components/cta-nosotros/cta-nosotros
   styleUrl: './nosotros.css',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class Nosotros {}
+export class Nosotros {
+}
