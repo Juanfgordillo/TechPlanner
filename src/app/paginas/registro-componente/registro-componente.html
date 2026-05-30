@@ -8,52 +8,22 @@
       <p>Ingrese las especificaciones técnicas del hardware</p>
     </div>
 
-    <form>
+    <p>Total de productos cargados: {{ precioProductos.length }}</p>
 
-      <div class="row">
-        <div class="form-group">
-          <label>Nombre</label>
-          <input type="text" placeholder="Ej: Intel Core i7 12700K">
-        </div>
+    <div *ngIf="getProductos() && precioProductos.length > 0">
+      <h2>Precios de Productos</h2>
 
-        <div class="form-group">
-          <label>Tipo</label>
-          <select>
-            <option>Procesador</option>
-            <option>Tarjeta gráfica</option>
-            <option>Memoria RAM</option>
-            <option>Almacenamiento</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="form-group">
-          <label>Marca</label>
-          <input type="text" placeholder="Intel, AMD, Nvidia">
-        </div>
-
-        <div class="form-group">
-          <label>Precio</label>
-          <input type="number" placeholder="$ 0.00">
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label>Descripción</label>
-        <textarea rows="3" placeholder="Detalles técnicos del componente"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label>Stock</label>
-        <input type="number" placeholder="Cantidad disponible">
-      </div>
-
-      <button type="submit" class="btn-primary">
-        Guardar componente
-      </button>
-
-    </form>
+      <ul>
+        <!-- 2. Recorremos el arreglo -->
+        <li *ngFor="let item of precioProductos">
+          <strong>{{ item.productName }}</strong> <br>
+          Tipo Cliente: {{ item.customerType }} <br>
+          Precio Base: ${{ item.basePrice }} | Descuento: {{ item.discountPercentage }}% <br>
+          <strong>Precio Final: ${{ item.finalPrice }}</strong>
+          <hr>
+        </li>
+      </ul>
+    </div>
 
   </div>
 

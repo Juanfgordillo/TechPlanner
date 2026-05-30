@@ -1,10 +1,6 @@
 export class Producto {
   id!: number;
   productName!: string;
-  basePrice!: number;
+  amount!: number;
   customerType!: string;
-  discountPercentage!: number;
-  taxPercentage!: number;
-  finalPrice!: number;
-  createdAt!: Date;
 }
