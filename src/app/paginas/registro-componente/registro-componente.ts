@@ -14,7 +14,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponente implements OnInit {
   productos: Producto[] = [];
-  precioProductos: PrecioProducto[] = [];
+  public precioProductos: PrecioProducto[] = [];
   // Íconos Font Awesome
   // faEdit = faEdit;
   // faTrash = faTrash;
