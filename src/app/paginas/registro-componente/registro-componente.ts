@@ -1,6 +1,5 @@
 import Swal from 'sweetalert2';
 import { ProductoService } from './precio.service';
-import { Producto } from './producto';
 import { PrecioProducto } from './precio-producto';
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
@@ -13,7 +12,6 @@ import { Component, OnInit } from '@angular/core';
   standalone: true,
 })
 export class RegistroComponente implements OnInit {
-  productos: Producto[] = [];
   public precioProductos: PrecioProducto[] = [];
   // Íconos Font Awesome
   // faEdit = faEdit;
@@ -24,8 +22,8 @@ export class RegistroComponente implements OnInit {
     this.cargarProductos();
   }
 
-  getProductos(): Producto[] {
-    return this.productos;
+  getProductos(): PrecioProducto[] {
+    return this.precioProductos;
   }
 
   ngOnInit(): void {
@@ -60,22 +58,22 @@ export class RegistroComponente implements OnInit {
     });
   }
 
-  editProducto(producto: Producto): void {
+  editProducto(precioproducto: PrecioProducto): void {
     Swal.fire({
       title: 'Editar producto',
       html: `
-        <input id="nombre"   class="swal2-input" placeholder="Nombre"   value="${producto.productName}">
-        <input id="precio" class="swal2-input" placeholder="Precio producto" value="${producto.amount}">
-        <input id="tipo"    class="swal2-input" placeholder="Tipo producto"    value="${producto.customerType}">
+        <input id="nombre"   class="swal2-input" placeholder="Nombre"   value="${precioproducto.productName}">
+        <input id="precio" class="swal2-input" placeholder="Precio producto" value="${precioproducto.basePrice}">
+        <input id="tipo"    class="swal2-input" placeholder="Tipo producto"    value="${precioproducto.customerType}">
       `,
       showCancelButton: true,
       confirmButtonText: 'Guardar',
       cancelButtonText: 'Cancelar',
       preConfirm: () => {
-        producto.productName = (document.getElementById('nombre') as HTMLInputElement).value;
-        producto.amount = Number(document.getElementById('precio') as HTMLInputElement);
-        producto.customerType = (document.getElementById('tipo') as HTMLInputElement).value;
-        return producto;
+        precioproducto.productName = (document.getElementById('nombre') as HTMLInputElement).value;
+        precioproducto.basePrice = Number(document.getElementById('precio') as HTMLInputElement);
+        precioproducto.customerType = (document.getElementById('tipo') as HTMLInputElement).value;
+        return precioproducto;
       },
     }).then((result) => {
       if (result.isConfirmed) {
@@ -110,10 +108,10 @@ export class RegistroComponente implements OnInit {
           return false;
         }
 
-        const nuevoProducto = new Producto();
+        const nuevoProducto = new PrecioProducto();
         nuevoProducto.productName = nombre;
         nuevoProducto.customerType = tipo;
-        nuevoProducto.amount = Number(precio);
+        nuevoProducto.basePrice = Number(precio);
         return nuevoProducto;
       },
     }).then((result) => {
@@ -126,6 +124,6 @@ export class RegistroComponente implements OnInit {
     });
   }
 
-  protected readonly Producto = Producto;
+  protected readonly PrecioProducto = PrecioProducto;
 }
 
